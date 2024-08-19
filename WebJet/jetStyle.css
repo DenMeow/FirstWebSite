@@ -1,0 +1,661 @@
+* {
+  color: #181818;
+  font-size: 0.875rem; /* 14px */
+  font-family: 'Poppins';
+  font-weight: 400;
+  text-transform: capitalize;
+  word-wrap: break-word;
+  margin: 0;
+}
+
+/* Фон главной страницы */
+.BackgroundImage {
+  background-image: url("./Atributes/backgroundCity.png");
+  background-size: cover; 
+  background-position: center;
+  background-repeat: no-repeat; 
+  height: 100vh;  /* 73rem; */
+  width: 100vw; 
+}
+
+/* Заголовок страницы */
+.Header {
+  height: 2.25rem; 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 2.375rem;
+}
+
+.Logo {
+  width: 8.6875rem; 
+  margin-left: 10%; 
+  display: flex;
+}
+
+.Navigation {
+  width: 41.875rem;
+  display: flex;
+}
+
+.Navigation a {
+  margin-right: 1.875rem; 
+}
+.Navigation a:hover, .HeadBuyTickets a:hover, .AddRequirements:hover, .Contact-col div:hover{
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.Button {
+  display: flex;
+  margin-right: 10%;
+}
+
+.Register {
+  margin-right: 0.625rem; 
+  border: none; 
+  background: none;
+}
+.Register:hover, .Sign-Up:hover {
+  color: gray;
+  cursor: pointer;
+}
+
+.Sign-Up {
+  width: 5.8125rem;
+  height: 1.9375rem;
+  background: #656293;
+  border-radius: 0.3125rem;
+  color: white;
+  text-align: center;
+  border: none; 
+}
+.Sign-Up:active {
+  background: #332f67;
+}
+
+/* текст на странице */
+.EnjoyReserved {
+  width: 43.75rem;
+  height: 31.25rem; 
+  padding-left: 10.3125rem; 
+  padding-top: 18.75rem;
+}
+
+.reserved {
+  font-weight: bold; 
+  color: #656293;
+  font-size: 4.125rem; 
+  font-family: 'Roboto';
+}
+.EnjoyReserved p {
+  font-size: 4.125rem; 
+  text-align: left;
+}
+
+.Explore-Now {
+  background-color: transparent;
+  border: none; 
+  cursor: pointer;
+  overflow: hidden; 
+  padding-top: 3.25rem;
+  font-size: 16px;
+  display: flex;
+  gap: 0.625rem;
+}
+
+.Explore-Now img {
+  transition: transform 0.3s ease; 
+  transform-origin: center; 
+}
+
+.Explore-Now:hover img {
+  transform: rotate(45deg);
+}
+.arrowImg {
+  margin-top: 0.3rem;
+}
+
+/* ЗАКАЗ БИЛЕТОВ */
+.BuyTickets {
+  margin: 0 auto;
+  justify-content: center;
+  margin-top: 9rem;
+  width: 69rem;
+  height: 17rem;
+  background: white;
+  box-shadow: 0px 1px 3px rgba(19, 10, 46, 0.13);
+  border-radius: 0.75rem;
+  margin-bottom: 5rem;
+}
+
+.HeadBuyTickets {
+  padding-top: 1.2rem;
+  margin-left: 2rem;
+}
+
+.HeadBuyTickets a {
+  color: #151515;
+  font-weight: 600;
+  margin-right: 1.875rem; 
+}
+
+.Flight {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center; 
+  width: 66.1875rem;
+  height: 7.3125rem;
+  margin-top: 2rem;
+  margin-left: 2rem;
+}
+
+.GroupInput {
+  width: 13rem;
+  height: 7.3125rem;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.custom-input {
+  width: 10rem;
+  border-radius: 0.625rem;
+  border: 0.0625rem #AAAAAA solid;
+  color: #151515;
+  font-size: 1.5rem;
+  font-weight: 600;
+
+  text-transform: uppercase;
+  padding: 0 20px;
+}
+
+.EllipseButton {
+  width: 1.75rem;
+  height: 1.75rem;
+  line-height: 1.75rem; 
+  background: white;
+  border-radius: 50%;
+  border: 0.0296875rem #AAAAAA solid;
+}
+
+.ImageButton {
+  width: 100%; 
+  height: auto;
+  object-fit: contain; 
+  display: block; 
+  margin: 0 auto;
+}
+
+.EllipseButton:active {
+  background-color: gray;
+}
+
+.GroupInputDate {
+  width: 16rem;
+  height: 7.3125rem;
+}
+.custom-inputDate {
+  width: 16rem;
+  height: 7.3125rem;
+  border-radius: 0.625rem;
+  border: 0.0625rem #AAAAAA solid;
+  background-color: white;
+  padding: 0 20px;
+  color: black;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.datepicker {
+  display: none;
+}
+
+.error-message {
+  position: absolute;
+  background-color: #ffcccc;
+  color: red;
+  padding: 5px;
+  display: none;
+  border-top-left-radius: 0.625rem;
+}
+
+.error {
+  border: 0.0625rem red solid;
+  width: 12.92rem;
+  border-radius: 0.625rem;
+}
+
+.custom-inputDate:hover {
+  cursor: pointer;
+}
+.Date_Image {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.Return {
+  color: rgba(6, 6, 6, 0.3);
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.Date_Image img {
+  width: 28px;
+  opacity: 0.3;
+}
+
+.AddRequirements {
+  margin-left: 2rem;
+  margin-top: 2.375rem;
+  color: #151515;
+  font-size: 0.875rem; 
+  font-family: 'Poppins';
+  font-weight: 400;
+}
+
+/* Кнопка покупки билета */
+.Book-Fights {
+  width: 14.5625rem;
+  height: 3.75rem;
+  margin: 0 auto;
+  display: flex;
+  align-items: center; 
+  justify-content: center;
+  background-color: #656293;
+  margin-top: -0.4rem;
+  border-radius: 0.75rem;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;  
+}
+
+.Book-Fights div { 
+  display: flex;
+  align-items: center; 
+  gap: 0.9rem; 
+  color: white;
+  font-size: 18px;
+}
+
+.Book-Fights img {
+  transition: transform 0.3s ease; 
+  transform-origin: center; 
+}
+
+.Book-Fights:hover img {
+  transform: rotate(45deg); /* Наклоняет изображение на 45 градусов при наведении */
+}
+
+/* PRIVATE */
+.TitleText {
+  justify-content: center;
+  font-size: 2.25rem;
+  font-weight: 700;
+  margin: 0 auto;
+  display: flex; 
+  height: 3rem;
+}
+
+.PrivateJetForBusiness {
+  width: 100%;
+  height: 76.25rem; 
+  margin-top: 11rem;
+}
+
+.GroupPrivateJetForBusiness {
+  display: flex;
+  justify-content: space-between;
+}
+
+.Private {
+  width: 80.5625rem; 
+  height: 32.6875rem;
+  margin-top: 5rem; 
+  display: flex;
+}
+
+.RectanglePrivate {
+  width: 25rem; 
+  height: 32.6875rem;
+  background: #E5F4F6;
+  border-top-left-radius: 3.125rem; 
+  border-top-right-radius: 3.125rem;
+}
+
+.GroupTextPrivate {
+  width: 28.9375rem; 
+  height: 15.3125rem;
+  margin-left: 51rem;
+  margin-top: -20rem;
+}
+
+.PrivateImage {
+  width: 36.8125rem; 
+  height: 24.5625rem; 
+  margin-left: 12.4375rem; 
+  margin-top: 4.125rem;
+  border-radius: 1.25rem; 
+}
+
+.GroupTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.JetCharterText {
+  width: 28.9375rem;
+  height: 12.1875rem; 
+  top: 3.125rem; 
+  text-align: justify;
+  color: rgba(21, 21, 21, 0.60);
+  font-size: 16px;
+}
+
+.Business {
+  width: 100vw;
+  height: 32.6875rem; 
+  margin-top: 43.3125rem; 
+  display: flex;
+}
+
+.RectangleBusiness {
+  width: 25rem; 
+  height: 32.6875rem; 
+  margin-left: 49rem;
+  background: #E5F4F6;
+  border-top-left-radius: 3.125rem; 
+  border-top-right-radius: 3.125rem; 
+}
+
+.BusinessImage {
+  width: 36.8125rem;
+  height: 24.5625rem; 
+  margin-left: -21rem;
+  margin-top: 4.125rem; 
+  border-radius: 1.25rem; 
+}
+
+.GroupTextBusiness {
+  width: 28.9375rem; 
+  height: 15.3125rem; 
+  margin-left: -51.7rem;
+  margin-top: -20rem; 
+}
+
+/* PrivateJetPerformanceAndSpecifications */
+.PrivateJetPerformanceAndSpecifications {
+  margin: 0 auto;
+  margin-top: 5rem;
+}
+
+.GroupSpecifications {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: start; 
+  margin-left: 15rem;
+  margin-right: 15rem;
+}
+
+.LeftGroup,
+.RightGroup {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.PlaneContainer {
+  display: flex;
+  justify-content: center; 
+}
+
+.SpecificationsImage {
+  width: 3.4375rem;
+  height: 3.4375rem;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.SpecificationsTitle{
+  text-align: center;
+  color: #151515;
+  margin-top: 2rem;
+  font-size: 18px;
+}
+
+.SpecificationsText{
+  text-align: center;
+  color: #151515;
+  opacity: 0.6;
+  margin-top: 1rem;
+  font-size: 16px;
+}
+
+.RectangleSpecifications {
+  width: 23.125rem;
+  height: 16.75rem;
+  background: white;
+  box-shadow: 4px 5px 3px 3px rgba(19, 10, 46, 0.13);
+  border-radius: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 5rem;
+}
+
+.Plane {
+  width: 19rem;
+  height: 21rem;
+  border-radius: 1.25rem;
+  display: block;
+  margin: 0 auto;
+  margin-top: 15rem;
+}
+
+
+/* LuxaryCharters */
+.LuxaryCharters {
+  width: 100vw;
+  background-image: url(./Atributes/Earth.png);
+  background-repeat: no-repeat;
+  background-position: calc(100% - 20px);
+}
+.ChartersGroup {
+  display: flex;
+  margin-top: 3rem;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-right: 2rem;
+  margin-left: 2rem;
+}
+
+.RectangleLuxaryCharters {
+  width: 23.125rem;
+  height: 21.75rem;
+  background: white;
+  box-shadow: 0px 1px 3px rgba(19, 10, 46, 0.13);
+  border-radius: 0.75rem;
+  margin-bottom: 10px;
+  overflow: hidden; /* Скрывает часть изображения, выходящую за границы прямоугольника */
+}
+
+.LuxaryChartersText {
+  text-align: center;
+  color: rgba(21, 21, 21, 0.60);
+  font-size: 16px;
+}
+
+.ChartersImage {
+  width: 100%; 
+  height: auto;
+  margin-top: 5px; 
+  border-radius: 12px; 
+  transform: scale(0.9); 
+  transform-origin: center;
+}
+
+/* EnjoyOurMembership */
+.EnjoyOurMembership {
+  margin-top: 6rem;
+  width: 100%;
+}
+.PiceGroup {
+  display: flex;
+  margin-top: 3rem;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.PopularPrice, .ElitePrice {
+  width: 400px;
+  height: 572px;
+  border-radius: 20px;
+  background-color: #F5F5F5;
+  margin-left: 104px;
+  margin-top: 40px;
+}
+.BusinessPrice {
+  width: 400px;
+  height: 572px;
+  border-radius: 20px;
+  background-color: #656293;
+  margin-left: 104px;
+}
+
+.WhatYouGet {
+  width: 207px;
+  color: #A9A9AA; 
+  font-size: 22px; 
+  margin-top: 32px;
+  margin-left: 24px;
+}
+.PopularPriceTitle {
+  font-size: 32px;
+  font-weight: 700;
+  margin-left: 24px;
+  margin-top: 24px;
+}
+.GroupSelect {
+  margin-top: 24px;
+  margin-left: 24px;
+}
+.Select {
+  display: flex;
+  margin-bottom: 16px;
+}
+.SelectText {
+  font-size: 14px;
+}
+.Select img {
+  margin-right: 8px; 
+}
+.Divider {
+  width: 352px; 
+  border: 1px #A9A9AA dashed;
+}
+.Pricing {
+  width: 352px;
+  margin-top: 83px;
+}
+
+.price {
+  color: #161616;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 40px;
+}
+
+.price-text {
+  color: #161616;
+  font-size: 18px;
+  line-height: 40px;
+  word-wrap: break-word;
+}
+.ChooseBottom {
+  margin: 0 auto;
+  width: 352px;
+  height: 64px;
+  border-radius: 12px;
+  background-color: #656293;
+  color: white;
+  font-size: 32px;
+  font-weight: 600;
+  border: none;
+}
+.ChooseBottom:active {
+  background: #332f67;
+}
+.ChooseBottomBusiness {
+  margin: 0 auto;
+  width: 352px;
+  height: 64px;
+  border-radius: 12px;
+  background-color: white;
+  color: black;
+  font-size: 32px;
+  font-weight: 600;
+  border: none;
+}
+.ChooseBottomBusiness:active {
+  background: rgb(197, 197, 197);
+}
+.ElitePrice {
+  margin-right: 104px;
+}
+
+/* PlaneLarge */
+.PlaneLarge {
+  width: 50rem;
+  height: 12.5rem;
+  margin: 0 auto; 
+  display: flex;
+  margin-top: 2rem;
+}
+
+/* Footer */
+.Footer {
+  width: 100vw;
+  height: 10.625rem;
+  background: #656293;
+}
+
+.PositionLogo {
+  width: 0.625rem;
+  top: 3.125rem;
+  margin: 0 auto;
+  padding-top: 3rem;
+  display: flex;
+}
+
+.Line {
+  width: 100vw; 
+  height: 0.0625rem; 
+  margin-top: 1.25rem;
+  background: rgba(255, 255, 255, 0.20);
+  margin-bottom: 1rem;
+}
+
+.Contact-group{
+  display: flex;
+  margin: 0 auto;
+  flex-direction: row;
+  justify-content: center;
+  gap: 36.25rem;
+  width: 100vw;
+}
+
+.Contact-col {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.Services {
+  color: rgba(255, 255, 255, 0.70); 
+}
+
+.AirAllRightsReserved {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.70);
+  display: flex;
+}

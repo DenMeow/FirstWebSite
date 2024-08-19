@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/jetStyle.css">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    
+    <!-- Календарь честно-->
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <script src="/jetAnimation.js"></script>
+
+    <title>JetAir</title>
+</head>
+<body>
+    <!-- Главная страница -->
+    <div class="BackgroundImage">
+      <!-- Заголовок -->
+      <div class="Header">
+        <img src="./Atributes/logo.png" class="Logo">
+        <div class="Navigation">
+            <a class="Home">Home</a>
+            <a class="Booking">Booking</a>
+            <a class="Private-Jet">Private Jet</a>
+            <a class="Specification">Specification</a>
+            <a class="Luxary Charters">Luxary Charters</a>
+            <a class="Membership">Membership</a>
+        </div>
+        <div class="Button">
+            <button class="Register">Register</button>
+            <button class="Sign-Up">Sign Up</button>
+        </div>
+      </div>
+      <!-- Текст на главной странице -->
+      <div class="EnjoyReserved">
+        <p> Enjoy <span class="reserved">RESERVED</span> Overhead bin space</p>
+        <button class="Explore-Now">Explore Now
+          <img src="./Atributes/arrow-right.png" class = "arrowImg">
+        </button>
+      </div>
+
+      <!-- Заказ билетов -->
+      <div class="BuyTickets">
+        <div class="HeadBuyTickets">
+            <a class="option">Round Trip</a>
+            <a class="option">Flight Type</a>
+            <a class="option">Person</a>
+        </div>
+        <div class="Flight">
+          <div class="GroupInput" id="custom-inputF">
+              <input id = "custom-inputFrom" class="custom-input" placeholder="From">
+              <div class="error-message" style="display: none;">Please fill in this field</div>
+          </div>
+
+          <button class="EllipseButton" onclick="switchInputValues()">
+              <img src="./Atributes/arrows-left-right 1.png" class="ImageButton">
+          </button>
+
+          <div class="GroupInput" id="custom-inputT">
+              <input id = "custom-inputTo" class="custom-input" placeholder="To">
+              <div class="error-message" style="display: none;">Please fill in this field</div>
+          </div>   
+          
+          <div class="GroupInputDate">
+            <input type="text" class="datepicker" id="DateDeparture">
+            <button class="openCalendar custom-inputDate">
+                <div class="Date_Image">
+                    <div class="Return">DEPARTURE</div>
+                    <img src="./Atributes/calendar 1.png">
+                </div>
+            </button>
+          </div>
+        
+          <div class="GroupInputDate">
+              <input type="text" class="datepicker" id="DateReturn">
+              <button class="openCalendar custom-inputDate">
+                <div class="Date_Image">
+                  <div class="Return">RETURN</div>
+                  <img src="./Atributes/calendar 1.png">
+                </div>
+              </button>
+          </div>
+        </div>
+        <div class="AddRequirements">Add Requirements</div>
+        <button onclick="BuyTickets()" class="Book-Fights">
+          <div>
+              Book Fights
+              <img src="./Atributes/arrow-right 1.png">
+          </div>
+        </button>
+      </div>
+    </div>
+    
+    <!-- PrivateJetForBusiness -->
+    <div class="PrivateJetForBusiness">
+      <div class="TitleText">Private Jet for Business & Leisure Purposes</div>
+      <div class="GroupPrivateJetForBusiness">
+
+        <div class="Private">
+          <div class="RectanglePrivate">
+            <img class="PrivateImage" src="./Atributes/Private Jet Charter.png">
+            <div class="GroupTextPrivate">
+              <div class="GroupTitle">Private Jet Charter</div>
+              <div class="JetCharterText">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="Business">
+          <div class="RectangleBusiness">
+            <img class="BusinessImage" src="./Atributes/Business Jet Charter.png">
+            <div class="GroupTextBusiness">
+              <div class="GroupTitle">Business Jet Charter</div>
+              <div class="JetCharterText">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PrivateJetPerformanceAndSpecifications -->
+    <div class="PrivateJetPerformanceAndSpecifications">
+      <div class="TitleText">Private Jet Performance and Specifications</div>
+      <div class="GroupSpecifications">
+        <!-- Добавляем новый контейнер для левой группы -->
+        <div class="LeftGroup">
+          <div class="RectangleSpecifications">
+            <img class="SpecificationsImage" src="./Atributes/seat.png">
+            <div class="SpecificationsTitle">Luxury And Comfort</div>
+            <div class="SpecificationsText">It is a long established fact that a reader will be distracted by the readable</div>
+          </div>
+          <div class="RectangleSpecifications">
+            <img class="SpecificationsImage" src="./Atributes/schedule.png">
+            <div class="SpecificationsTitle">Personal schedule & booking</div>
+            <div class="SpecificationsText">It is a long established fact that a reader will be distracted by the readable</div>
+          </div>
+        </div>
+        <div class="PlaneContainer">
+          <img class="Plane" src="./Atributes/plane.png">
+        </div>
+        <!-- Добавляем новый контейнер для правой группы -->
+        <div class="RightGroup">
+          <div class="RectangleSpecifications">
+            <img class="SpecificationsImage" src="./Atributes/safe.png">
+            <div class="SpecificationsTitle">SAFETY AND SECURITY</div>
+            <div class="SpecificationsText">It is a long established fact that a reader will be distracted by the readable</div>
+          </div>
+          <div class="RectangleSpecifications">
+            <img class="SpecificationsImage" src="./Atributes/captain.png">
+            <div class="SpecificationsTitle">EXPERIENCED CREW</div>
+            <div class="SpecificationsText">It is a long established fact that a reader will be distracted by the readable</div>
+          </div>
+        </div>        
+      </div>
+    </div>
+    
+    <!-- LuxaryCharters -->
+    <div class="LuxaryCharters">
+      <div class="TitleText">Luxary Charters</div>
+      <div class="ChartersGroup">
+          <div class="RectangleLuxaryCharters">
+            <img class="ChartersImage" src="./Atributes/Piagio.png">
+            <div class="LuxaryChartersText">Piago P.180 Avanti</div>
+          </div>
+          <div class="RectangleLuxaryCharters">
+            <img class="ChartersImage" src="./Atributes/Pilatus.png">
+            <div class="LuxaryChartersText">Pilatus PC-12</div>
+          </div>
+          <div class="RectangleLuxaryCharters">
+            <img class="ChartersImage" src="./Atributes/Piper.png">
+            <div class="LuxaryChartersText">Piper Pa27 Aztec</div>
+          </div>
+          <div class="RectangleLuxaryCharters">
+            <img class="ChartersImage" src="./Atributes/Beech.png">
+            <div class="LuxaryChartersText">Beech BE100 King Air</div>
+          </div>
+      </div>
+    </div>
+
+    <!-- EnjoyOurMembership -->
+    <div class="EnjoyOurMembership">
+      <div class="TitleText">Enjoy Our Membership</div>
+      <div class="PiceGroup">
+        <div class="PopularPrice">
+            <div class="PopularPriceTitle">Popular</div>
+            <div class="WhatYouGet">What You'll Get</div>
+            <div class="GroupSelect">
+              <div class="Select">
+                <img src="./Atributes/OK.png" alt="">
+                <div class="SelectText">One-time initiation fee $0</div>
+              </div>
+              <div class="Select">
+                <img src="./Atributes/OK.png" alt="">
+                <div class="SelectText">Deposit $50k</div>
+              </div>
+              <div class="Select">
+                <img src="./Atributes/OK.png" alt="">
+                <div class="SelectText">Pricing / rates Dynamic</div>
+              </div>
+              <div class="Select">
+                <img src="./Atributes/OK.png" alt="">
+                <div class="SelectText">Priority fleet access Yes</div>
+              </div>
+              <div class="Select">
+                <img src="./Atributes/OK.png" alt="">
+                <div class="SelectText">Guaranteed fleet access No</div>
+              </div>
+              <div class="Divider"></div>
+              <div class="Pricing">
+                <span class="price">$250</span>
+                <span class="price-text">/month</span>
+              </div>
+              <button class="ChooseBottom"> Choose</button>
+            </div>
+        </div>
+        <div class="BusinessPrice">
+          <div class="PopularPriceTitle" style="color: white;">Business</div>
+            <div class="WhatYouGet">What You'll Get</div>
+            <div class="GroupSelect">
+              <div class="Select">
+                <img src="./Atributes/OKWhite.png" alt="">
+                <div class="SelectText" style="color: white;">One-time initiation fee $0</div>
+              </div>
+              <div class="Select">
+                <img src="./Atributes/OKWhite.png" alt="">
+                <div class="SelectText" style="color: white;">Deposit $50k</div>
+              </div>
+              <div class="Select">
+                <img src="./Atributes/OKWhite.png" alt="">
+                <div class="SelectText" style="color: white;">Pricing / rates Dynamic</div>
+              </div>
+              <div class="Select">
+                <img src="./Atributes/OKWhite.png" alt="">
+                <div class="SelectText" style="color: white;">Priority fleet access Yes</div>
+              </div>
+              <div class="Select">
+                <img src="./Atributes/OKWhite.png" alt="">
+                <div class="SelectText" style="color: white;">Guaranteed fleet access No</div>
+              </div>
+              <div class="Divider"></div>
+              <div class="Pricing" >
+                <span class="price" style="color: white;">$480</span>
+                <span class="price-text" style="color: white;">/month</span>
+              </div>
+              <button class="ChooseBottomBusiness"> Choose</button>
+            </div>
+        </div>
+        <div class="ElitePrice">
+          <div class="PopularPriceTitle">Elite</div>
+            <div class="WhatYouGet">What You'll Get</div>
+            <div class="GroupSelect">
+              <div class="Select">
+                <img src="./Atributes/OK.png" alt="">
+                <div class="SelectText">One-time initiation fee $0</div>
+              </div>
+              <div class="Select">
+                <img src="./Atributes/OK.png" alt="">
+                <div class="SelectText">Deposit $50k</div>
+              </div>
+              <div class="Select">
+                <img src="./Atributes/OK.png" alt="">
+                <div class="SelectText">Pricing / rates Dynamic</div>
+              </div>
+              <div class="Select">
+                <img src="./Atributes/OK.png" alt="">
+                <div class="SelectText">Priority fleet access Yes</div>
+              </div>
+              <div class="Select">
+                <img src="./Atributes/OK.png" alt="">
+                <div class="SelectText">Guaranteed fleet access Yes</div>
+              </div>
+              <div class="Divider"></div>
+              <div class="Pricing">
+                <span class="price">$680</span>
+                <span class="price-text">/month</span>
+              </div>
+              <button class="ChooseBottom"> Choose</button>
+            </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PlaneLarge -->
+    <img class="PlaneLarge"src="./Atributes/plane-large.png">
+
+    <!-- Footer -->
+    <div class="Footer">
+      <div class="PositionLogo">
+        <img src="./Atributes/Logo2.png" alt="">
+      </div>
+      <div class="Line"></div>
+      <div class="Contact-group">
+        <div class="Contact-col">
+          <div class="Services">SERVICES</div>
+          <div class="Services">ABOUT US</div>
+          <div class="Services">NEWS</div>
+          <div class="Services">CONTACT</div>
+        </div>
+
+        <div class="AirAllRightsReserved">© 2021 Air. All rights reserved.</div>
+      </div>
+    </div>
+</body>
+</html>
